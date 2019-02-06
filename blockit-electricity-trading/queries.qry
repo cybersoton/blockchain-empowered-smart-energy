@@ -1,0 +1,4 @@
+query TotalProduced {
+  description: "Select total amount of electricity produced"
+  statement: SELECT org.blockit.electricity.Electricity
+}

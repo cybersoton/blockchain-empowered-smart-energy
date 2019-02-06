@@ -1,0 +1,56 @@
+namespace org.blockit.electricity
+
+
+participant Prosumer identified by prosumerId {
+  o String prosumerId
+  o String name
+  o Double balance
+  --> Electricity electricityAvailable
+}
+
+asset Electricity identified by electricityId {
+  o String electricityId
+  o Double electricityAmount
+  --> Prosumer prosumer
+}
+
+asset EnergyRequest identified by RequestId {
+  o String RequestId
+  o Double maxPrice
+  o String description
+  o ListingState state
+  o Offer[] offers optional
+  --> Electricity electricity
+}
+
+enum ListingState {
+  o Request_Energy
+  o Request_Not_Met
+  o Request_Met
+}
+
+transaction TradeElectricity {
+  --> Prosumer prosumerA 
+  --> Prosumer prosumerB
+  o Double amount
+}
+
+transaction ProduceElectricity {
+  --> Prosumer prosumer
+  o Double amount
+}
+
+transaction ConsumeElectricity {
+  --> Prosumer prosumer
+  o Double amount
+}
+
+transaction Offer {
+  o Double bidPrice
+  --> EnergyRequest listing
+  --> Prosumer prosumer
+}
+
+transaction CloseBidding {
+  --> EnergyRequest listing
+}
