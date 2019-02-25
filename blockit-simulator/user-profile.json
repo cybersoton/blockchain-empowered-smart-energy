@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Federico_Lombardi",
+        "prosumerId": "1",
+        "balance": 100,
+        "reservePrice": 100,
+        "maxBid": 50,
+        "description": "20_Highfield_Lane",
+        "electricityId": "1",
+        "electricityamount": 30,
+        "consumptionRate": 10,
+        "productionRate": 10
+    },
+    {
+        "name": "Andrea_Margheri",
+        "prosumerId": "2",
+        "balance": 100,
+        "reservePrice": 200,
+        "maxBid": 60,
+        "description": "10_Glen_Eyre_Road",
+        "electricityId": "2",
+        "electricityamount": 20,
+        "consumptionRate": 5,
+        "productionRate": 10
+    },
+    {
+        "name": "Leonardo_Aniello",
+        "prosumerId": "3",
+        "balance": 100,
+        "reservePrice": 300,
+        "maxBid": 70,
+        "description": "102_Basset_Green_Road",
+        "electricityId": "3",
+        "electricityamount": 30,
+        "consumptionRate": 3,
+        "productionRate": 10
+    }
+]

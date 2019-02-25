@@ -1,0 +1,1 @@
+To create a new archive instance in Hyperledger fabric run (composer archive create -t dir -n ../) after you increment on the deployment version in package.json.
