@@ -1,0 +1,20 @@
+[
+    {
+        "name": "hello",
+        "prosumerId": "1",
+        "balance": 100,
+        "reservePrice": 100,
+        "description": "bla",
+        "electricityId": "87230523153134465",
+        "electricityamount": 100
+    },
+    {
+        "name": "me",
+        "prosumerId": "2",
+        "balance": 100,
+        "reservePrice": 100,
+        "description": "bla",
+        "electricityId": "665322133531844879",
+        "electricityamount": 100
+    }
+]

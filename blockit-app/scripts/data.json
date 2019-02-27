@@ -1,0 +1,189 @@
+[
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 10
+    },
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 20
+    },
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 30
+    },
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 40
+    },
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 50
+    },
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 60
+    },
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 70
+    },
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 80
+    },
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 90
+    },
+    {
+        "command": "consume",
+        "prosumerId": 1,
+        "amount": 100
+    },
+    {
+        "command": "consume",
+        "prosumerId": 1,
+        "amount": 90
+    },
+    {
+        "command": "consume",
+        "prosumerId": 1,
+        "amount": 80
+    },
+    {
+        "command": "consume",
+        "prosumerId": 1,
+        "amount": 70
+    },
+    {
+        "command": "consume",
+        "prosumerId": 1,
+        "amount": 60
+    },
+    {
+        "command": "consume",
+        "prosumerId": 1,
+        "amount": 50
+    },
+    {
+        "command": "consume",
+        "prosumerId": 1,
+        "amount": 40
+    },
+    {
+        "command": "consume",
+        "prosumerId": 1,
+        "amount": 30
+    },
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 10
+    },
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 20
+    },
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 30
+    },
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 40
+    },
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 50
+    },
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 60
+    },
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 70
+    },
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 80
+    },
+    {
+        "command": "produce",
+        "prosumerId": 1,
+        "amount": 90
+    },
+    {
+        "command": "consume",
+        "prosumerId": 1,
+        "amount": 100
+    },
+    {
+        "command": "consume",
+        "prosumerId": 1,
+        "amount": 90
+    },
+    {
+        "command": "consume",
+        "prosumerId": 1,
+        "amount": 80
+    },
+    {
+        "command": "consume",
+        "prosumerId": 1,
+        "amount": 70
+    },
+    {
+        "command": "consume",
+        "prosumerId": 1,
+        "amount": 60
+    },
+    {
+        "command": "consume",
+        "prosumerId": 1,
+        "amount": 50
+    },
+    {
+        "command": "consume",
+        "prosumerId": 1,
+        "amount": 40
+    },
+    {
+        "command": "consume",
+        "prosumerId": 1,
+        "amount": 30
+    },
+    {
+        "command": "listing",
+        "listingId": 1,
+        "electricityId": 100,
+        "reservePrice": "bla",
+        "description": "87230523153134465"
+    },
+    {
+        "command": "offer",
+        "prosumerId": 1,
+        "amount": 20
+    },
+    {
+        "command": "offer",
+        "prosumerId": 2,
+        "amount": 10
+    }
+]
