@@ -33,11 +33,30 @@ async function ProduceElectricity(produce) {
  */
 async function ConsumeElectricity(consume) {
   let assetRegistry = await getAssetRegistry('org.blockit.electricity.Electricity')
-  
+  if (consume.amount < consume.prosumer.electricityAvailable.electricityAmount){
   consume.prosumer.electricityAvailable.electricityAmount = consume.prosumer.electricityAvailable.electricityAmount - consume.amount
-  
   await assetRegistry.update(consume.prosumer.electricityAvailable)
+  }
 }
+
+
+
+
+var addElectricityListing = function (registry,namespace,AssetType,listing,ElectricityId,reservePrice,description,state){
+    // 3. This Array will hold the instances of electricity resource
+    let factory = startfactory();
+    
+    var asset = factory.newResource(namespace,AssetType,listing,ElectricityId,reservePrice,description,state);
+    asset.setPropertyValue('RequestId', listing);
+    asset.setPropertyValue('maxPrice', reservePrice);
+    asset.setPropertyValue('description', description);
+    asset.setPropertyValue('state', state);
+    asset.electricity = factory.newRelationship('org.blockit.electricity','Electricity',ElectricityId);
+
+    return(asset)
+}
+
+
 
 
 /**
@@ -76,13 +95,16 @@ async function closeBidding(closeBidding) {  // eslint-disable-line no-unused-va
     let lowestOffer = null;
     let buyer = null;
     let seller = null;
-    if (listing.offers && listing.offers.length > 0) {
+    if (listing.offers && listing.offers.length > 0) 
+    {
         // sort the bids by bidPrice
-        listing.offers.sort(function(a, b) {
+        listing.offers.sort(function(a, b) 
+        {
             return (a.bidPrice - b.bidPrice);
         });
         lowestOffer = listing.offers[0];
-        if (lowestOffer.bidPrice <= listing.maxPrice) {
+        if (lowestOffer.bidPrice <= listing.maxPrice) 
+        {
             // mark the request as met
             listing.state = 'Request_Met';
             buyer = lowestOffer.prosumer;
@@ -98,6 +120,16 @@ async function closeBidding(closeBidding) {  // eslint-disable-line no-unused-va
             // transfer the energy to the buyer
             listing.electricity.prosumer = buyer;
             // clear the offers
+            listing.offers = null;
+        }
+        if (lowestOffer.bidPrice >= listing.maxPrice) 
+        {
+            // mark the request as not met
+            // use this for future work to add conditional transaction from grid
+            listing.state = 'Request_Not_Met';
+            let lowestOffer = null;
+            let buyer = null;
+            let seller = null;
             listing.offers = null;
         }
     }
@@ -117,4 +149,5 @@ async function closeBidding(closeBidding) {  // eslint-disable-line no-unused-va
         const userRegistry = await getParticipantRegistry('org.blockit.electricity.Prosumer');
         await userRegistry.updateAll([buyer, seller]);
     }
+
 }

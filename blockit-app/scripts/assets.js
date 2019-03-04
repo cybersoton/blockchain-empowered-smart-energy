@@ -8,12 +8,12 @@ var startfactory = ()=>{
     return(factory);
 }
 //----------------------------------------------------//
-var addElectricityListing = function (registry,namespace,AssetType,listing,ElectricityId,reservePrice,description,state){
+var addElectricityListing = function (registry,namespace,AssetType,listingId,ElectricityId,reservePrice,description,state){
     // 3. This Array will hold the instances of electricity resource
     let factory = startfactory();
     
-    var asset = factory.newResource(namespace,AssetType,listing,ElectricityId,reservePrice,description,state);
-    asset.setPropertyValue('RequestId', listing);
+    var asset = factory.newResource(namespace,AssetType,listingId,ElectricityId,reservePrice,description,state);
+    asset.setPropertyValue('RequestId', listingId);
     asset.setPropertyValue('maxPrice', reservePrice);
     asset.setPropertyValue('description', description);
     asset.setPropertyValue('state', state);

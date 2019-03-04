@@ -28,6 +28,8 @@ var main = function ()
             });
         });
 
+var i;
+for (i = 0; i <= 9; i++) { 
 
     user.forEach(num => 
         {
@@ -66,11 +68,14 @@ var main = function ()
             
             setImmediate(() => 
             {
-                util.addCloseInstance('close',num.prosumerId);
+                util.addCloseInstance('close',listingId);
                 listingId=listingId+1;
             });       
             
         });
+        
+        
+    }    
 }
 
 main();

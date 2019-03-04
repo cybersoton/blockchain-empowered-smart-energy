@@ -5,16 +5,16 @@
   "version": "0.0.3",
   "devDependencies": {
     "browserfs": "^1.2.0",
-    "chai": "^3.5.0",
-    "composer-admin": "^0.20.6",
-    "composer-cli": "^0.20.6",
-    "composer-client": "^0.20.6",
-    "composer-connector-embedded": "^0.20.6",
-    "eslint": "^3.6.1",
+    "chai": "^4.2.0",
+    "composer-admin": "^0.20.7",
+    "composer-cli": "^0.20.7",
+    "composer-client": "^0.20.7",
+    "composer-connector-embedded": "^0.20.7",
+    "eslint": "^5.14.1",
     "istanbul": "^0.4.5",
     "jsdoc": "^3.4.1",
     "mkdirp": "^0.5.1",
-    "mocha": "^3.2.0",
+    "mocha": "^6.0.2",
     "moment": "^2.19.3"
   },
   "keywords": [],
@@ -29,17 +29,17 @@
     "lint": "eslint .",
     "postlicchk": "npm run doc",
     "postlint": "npm run licchk",
-    "prepublish": "mkdirp ./dist && composer archive create  --sourceType dir --sourceName . -a ./dist/unnamed-network.bna",
+    "prepublish": "",
     "pretest": "npm run lint",
     "test": "mocha --recursive"
   },
   "dependencies": {
-    "composer-common": "^0.20.6",
-    "composer-connector-hlfv1": "^0.20.6",
-    "composer-connector-proxy": "^0.20.6",
-    "composer-wallet-filesystem": "^0.20.6",
-    "composer-wallet-inmemory": "^0.20.6",
+    "composer-common": "^0.20.7",
+    "composer-connector-hlfv1": "^0.20.7",
+    "composer-connector-proxy": "^0.20.7",
+    "composer-wallet-filesystem": "^0.20.7",
+    "composer-wallet-inmemory": "^0.20.7",
     "lodash": "^4.17.11",
-    "yargs": "^12.0.5"
+    "yargs": "^13.2.1"
   }
 }

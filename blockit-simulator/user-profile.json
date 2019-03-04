@@ -1,38 +1,62 @@
 [
     {
-        "name": "Federico_Lombardi",
+        "name": "Prosumer_1",
         "prosumerId": "1",
         "balance": 100,
         "reservePrice": 100,
         "maxBid": 50,
-        "description": "20_Highfield_Lane",
+        "description": "Prosumer_1_address",
         "electricityId": "1",
         "electricityamount": 30,
         "consumptionRate": 10,
         "productionRate": 10
     },
     {
-        "name": "Andrea_Margheri",
+        "name": "Prosumer_2",
         "prosumerId": "2",
         "balance": 100,
-        "reservePrice": 200,
+        "reservePrice": 100,
         "maxBid": 60,
-        "description": "10_Glen_Eyre_Road",
+        "description": "Prosumer_2_address",
         "electricityId": "2",
         "electricityamount": 20,
-        "consumptionRate": 5,
+        "consumptionRate": 8,
         "productionRate": 10
     },
     {
-        "name": "Leonardo_Aniello",
+        "name": "Prosumer_3",
         "prosumerId": "3",
         "balance": 100,
-        "reservePrice": 300,
+        "reservePrice": 100,
         "maxBid": 70,
-        "description": "102_Basset_Green_Road",
+        "description": "Prosumer_3_address",
         "electricityId": "3",
         "electricityamount": 30,
-        "consumptionRate": 3,
+        "consumptionRate": 6,
+        "productionRate": 10
+    },
+    {
+        "name": "Prosumer_4",
+        "prosumerId": "4",
+        "balance": 100,
+        "reservePrice": 100,
+        "maxBid": 80,
+        "description": "Prosumer_4_address",
+        "electricityId": "4",
+        "electricityamount": 30,
+        "consumptionRate": 4,
+        "productionRate": 10
+    },
+    {
+        "name": "Prosumer_5",
+        "prosumerId": "5",
+        "balance": 100,
+        "reservePrice": 100,
+        "maxBid": 90,
+        "description": "Prosumer_5_address",
+        "electricityId": "5",
+        "electricityamount": 30,
+        "consumptionRate": 2,
         "productionRate": 10
     }
 ]

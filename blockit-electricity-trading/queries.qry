@@ -2,3 +2,24 @@ query TotalProduced {
   description: "Select total amount of electricity produced"
   statement: SELECT org.blockit.electricity.Electricity
 }
+
+query TotalByState {
+  description: "Select total amount of electricity by state"
+  statement: SELECT org.blockit.electricity.CloseBidding
+ 
+  WHERE (listing.state == _$state)
+}
+
+query AllListing {
+  description: "Show All Energy Requests"
+  statement: SELECT org.blockit.electricity.EnergyRequest
+}
+
+query showProsumerActionsAllHistorians{ 
+  description: "Select commodity all historians" 
+  statement: 
+    SELECT org.hyperledger.composer.system.HistorianRecord FROM 
+HistorianRegistry
+          WHERE (transactionType == 'ProduceElectricity' OR transactionType == 
+'ConsumeElectricity' OR transactionType == 'Offer' OR transactionType == 'CloseBidding') 
+} 
