@@ -1,7 +1,8 @@
-[# blockit-electricity-trading
+# blockit-electricity-trading
 
 BlockIT energy trading application for IOT devices
-](# BlockIT-empowered Infrastructure for IoT (BlockIT)
+# BlockIT-empowered Infrastructure for IoT (BlockIT)
+
 This hyperledger implementation BlockIT energy trading application for IOT devices. BlockIT is a project under the [Petras Umbrella](https://www.petrashub.org/portfolio-item/blockchain-empowered-infrastructure-for-iot-blockit/).
 #
 
@@ -32,4 +33,4 @@ Trade, Consume and Produce are built to be support functions so they are limited
 ## Futurework
 
 - Add queries to the queries.qry file.
-- Implement both subtractive and additive bidding functions.)
+- Implement both subtractive and additive bidding functions.
