@@ -1,9 +1,9 @@
 #!/bin/bash
-node blockit-app.js prosumer -p 1 -n Federico_Lombardi --bl 100 -e 1
+node blockit-app.js prosumer -p 1 -n Federico_Lombardi --bl 10000 -e 1
 node blockit-app.js electricity -p 1 -a 30 -e 1
-node blockit-app.js prosumer -p 2 -n Andrea_Margheri --bl 100 -e 2
+node blockit-app.js prosumer -p 2 -n Andrea_Margheri --bl 10000 -e 2
 node blockit-app.js electricity -p 2 -a 20 -e 2
-node blockit-app.js prosumer -p 3 -n Leonardo_Aniello --bl 100 -e 3
+node blockit-app.js prosumer -p 3 -n Leonardo_Aniello --bl 10000 -e 3
 node blockit-app.js electricity -p 3 -a 30 -e 3
 node blockit-app.js produce -p 1 -a 40
 node blockit-app.js produce -p 1 -a 50
