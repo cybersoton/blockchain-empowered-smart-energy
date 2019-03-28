@@ -47,10 +47,9 @@ const name ={Describe: 'Name of Prosumer',
   demand: false,
   string: true,
   alias: 'n'};
-const description ={Describe: 'Description of Lisitng',
-  demand: false,
-  string: true,
-  alias: 'd'};
+const requestAmount ={Describe: 'Amount to be requested',
+  demand: true,
+  alias: 'rq'};
 // Loading yargs returned argument for transactions
 const argv=yargs
     .command('consume', 'Consume Electricity', {prosumerId: prosumerId, amount: amount})
@@ -60,7 +59,7 @@ const argv=yargs
     .command('close', 'Close Bidding', {listingId: listingId})
 // Loading yargs returned argument for assets
     .command('electricity', 'addElectricity', {prosumerId: prosumerId, amount: amount, electricityId: electricityId})
-    .command('listing', 'Add Listing', {listingId: listingId, reservePrice: reservePrice, description: description, electricityId: electricityId})
+    .command('listing', 'Add Listing', {listingId: listingId, reservePrice: reservePrice, requestAmount: requestAmount, electricityId: electricityId})
     .command('prosumer', 'Add Prosumer', {prosumerId: prosumerId, name: name, balance: balance, electricityId: electricityId})
 // Loading yargs returned argument for seeding Blockit
     .help()
@@ -111,7 +110,7 @@ function main(error) {
   }
   // ----------------------------------------------------//
   if (command === 'listing') {
-    operations.listing(bnUtil, assets, namespace, argv.listingId, argv.electricityId, argv.reservePrice, argv.description, state);
+    operations.listing(bnUtil, assets, namespace, argv.listingId, argv.electricityId, argv.reservePrice, argv.requestAmount, state);
   }
   // ----------------------------------------------------//
   if (command === 'prosumer') {

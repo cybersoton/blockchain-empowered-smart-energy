@@ -116,11 +116,11 @@ const elec = async function(bnUtil, assets, namespace, electricityId, prosumerId
   });
 };
 // ----------------------------------------------------//
-const listing = function(bnUtil, assets, namespace, listingId, electricityId, reservePrice, description, state) {
+const listing = function(bnUtil, assets, namespace, listingId, electricityId, reservePrice, requestAmount, state) {
   const AssetType = 'EnergyRequest';
   return bnUtil.connection.getAssetRegistry(namespace+'.'+AssetType).then((registry)=> {
     console.log('2. Received Registry: ', registry.id);
-    const asset = assets.addElectricityListing(registry, namespace, AssetType, listingId, electricityId, reservePrice, description, state);
+    const asset = assets.addElectricityListing(registry, namespace, AssetType, listingId, electricityId, reservePrice, requestAmount, state);
 
     submitAsset(asset, bnUtil, registry);
   }

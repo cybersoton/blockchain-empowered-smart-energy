@@ -8,14 +8,14 @@ const startfactory = ()=>{
   return (factory);
 };
 // ----------------------------------------------------//
-const addElectricityListing = function(registry, namespace, AssetType, listingId, ElectricityId, reservePrice, description, state) {
+const addElectricityListing = function(registry, namespace, AssetType, listingId, ElectricityId, reservePrice, requestAmount, state) {
   // 3. This Array will hold the instances of electricity resource
   const factory = startfactory();
 
-  const asset = factory.newResource(namespace, AssetType, listingId, ElectricityId, reservePrice, description, state);
+  const asset = factory.newResource(namespace, AssetType, listingId, ElectricityId, reservePrice, requestAmount, state);
   asset.setPropertyValue('RequestId', listingId);
   asset.setPropertyValue('maxPrice', reservePrice);
-  asset.setPropertyValue('description', description);
+  asset.setPropertyValue('requestAmount', requestAmount);
   asset.setPropertyValue('state', state);
   asset.electricity = factory.newRelationship('org.blockit.electricity', 'Electricity', ElectricityId);
 
