@@ -1,6 +1,6 @@
 # BlockIT: Blockchain-Empowered-Smart-Energy
 
-The BlockIT project is developed under the [Petras](https://www.petrashub.org/portfolio-item/blockchain-empowered-infrastructure-for-iot-blockit/) Umbrealla.  <img src="https://www.petrashub.org/wp-content/uploads/2018/06/BlockIT-1200x598.png" class="attachment-entry-fullwidth size-entry-fullwidth wp-post-image" alt="">
+The BlockIT project is developed under the [Petras](https://www.petrashub.org/portfolio-item/blockchain-empowered-infrastructure-for-iot-blockit/) Umbrella.  <img src="https://www.petrashub.org/wp-content/uploads/2018/06/BlockIT-1200x598.png" class="attachment-entry-fullwidth size-entry-fullwidth wp-post-image" alt="">
 
 This project looks how blockchain, the technology behind decentralised systems such as Bitcoin, can be exploited to make the Infrastructure of IoT more resilient.  This project will use blockchain to connect and coordinate IoT devices, enabling them to share their data with guarantees that their integrity will be preserved and privacy protected.
 
