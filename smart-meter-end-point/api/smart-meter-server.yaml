@@ -1,0 +1,90 @@
+swagger: "2.0"
+info:
+  version: 0.0.9
+  title: Smart-Meter-Server
+  contact:
+    name: Nawfal Fadel
+    email: n.fadel@soton.ac.uk
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /consume:
+    post:
+      description: Store a consumption of energy
+      parameters:
+        - name: consumeEnergy
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/consumer-request-body'
+      responses:
+        '200':
+          description: The response body for a successful response.
+          schema:
+            $ref: '#/definitions/ack-response'
+        '400':
+          description: Invalid request, required parameter(s) missing.
+        '401':
+          description: The operation is not allowed.
+  /get:
+    post:
+      description:  Retrieving consumption given an Id\n 
+      parameters:
+        - name: consumeEnergy
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/get-request-body'
+      responses:
+        200:
+          description:  The response body for a successful response. 
+          schema:
+            $ref:  '#/definitions/energy-response'
+        400:
+          description:  Invalid request, required parameter(s) missing. 
+        401:
+          description:  The operation is not allowed. 
+        404:
+          description:  The requested key is not found.   
+definitions:
+  consumer-request-body:
+    type: object
+    required:
+    - id
+    - energy
+    properties:
+      id:
+        type:  string 
+        description:  Identifier of the smart meter entity. 
+      energy:
+        type:  string 
+        description:  The value of energy consumed. 
+  get-request-body:
+    type:  object 
+    required:
+    -  key 
+    properties:
+      key:
+        type:  string 
+        description:  Identifier of the requesting entity. 
+  ack-response:
+    type:  object 
+    required:
+    -  id 
+    properties:
+      id:
+        type:  string 
+        description:  A message signifying that the request action has been successfully\
+          \ executed 
+    example:
+      message:  200 
+  energy-response:
+    type:  object 
+    required:
+    -  energy 
+    properties:
+      energy:
+        type:  string 
+        description:  HTTP response containing the list of keys for a category 
