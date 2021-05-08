@@ -45,7 +45,7 @@
     "composer-wallet-inmemory": "^0.20.7",
     "cryptiles": "^4.1.3",
     "debug": "^4.1.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "yargs": "^13.2.1"
   }
 }
