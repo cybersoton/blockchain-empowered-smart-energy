@@ -24,7 +24,7 @@
     "jsdoc": "^3.4.1",
     "mkdirp": "^0.5.1",
     "mocha": "^6.0.2",
-    "moment": "^2.24.0"
+    "moment": "^2.29.2"
   },
   "keywords": [],
   "license": "Apache 2.0",
